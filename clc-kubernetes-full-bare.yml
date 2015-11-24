@@ -56,7 +56,7 @@
         count: 1
         group: "{{ group }}"
         network_id: "{{ network_id }}"
-        type: baremetal
+        type: bareMetal
         configuration_id: 529e2592a3e640a7c2617b5e8bc8feaed94eac22
         storage_type: standard
       register: new_inv_node
