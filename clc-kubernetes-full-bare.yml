@@ -51,12 +51,12 @@
       clc_server:
         name: "K8SN"
         location: "{{ datacenter }}"
-        template: ubuntu14_64Bit
+        template: 'ubuntu14_64Bit'
         password: "{{ server_pass }}"
         count: 1
         group: "{{ group }}"
         network_id: "{{ network_id }}"
-        type: bareMetal
+        type: 'bareMetal'
         configuration_id: 529e2592a3e640a7c2617b5e8bc8feaed94eac22
         storage_type: standard
       register: new_inv_node
