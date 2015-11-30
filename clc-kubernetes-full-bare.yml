@@ -59,6 +59,8 @@
         type: 'bareMetal'
         configuration_id: f24b18ba2ce23657657444601649c7b8b7f9b60c
         storage_type: standard
+      async: 1500
+      poll: 30      
       register: new_inv_node
     
     - name: Add new servers to in-memory inventory.
@@ -74,7 +76,7 @@
     
       
     - name: Wait for SSH to Come up on bare metal server(s)
-      wait_for: host={{ item.details.ipAddresses[0].internal }} port=22 delay=5 timeout=3200 state=started
+      wait_for: host={{ item.details.ipAddresses[0].internal }} port=22 delay=300 timeout=320 state=started
       with_flattened:
         - new_inv_node.servers
         
