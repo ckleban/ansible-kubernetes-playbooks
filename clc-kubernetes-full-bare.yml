@@ -52,7 +52,7 @@
         name: K8SN
         location: "{{ datacenter }}"
         os_type: 'ubuntu14_64Bit'
-        #password: "{{ server_pass }}"
+        password: "{{ server_pass }}"
         count: 1
         group: "{{ group }}"
         network_id: "{{ network_id }}"
