@@ -49,10 +49,10 @@
     
     - name: Create new kubernetes server for node deployment.
       clc_server:
-        name: "K8SN"
+        name: K8SN
         location: "{{ datacenter }}"
-        template: 'ubuntu14_64Bit'
-        password: "{{ server_pass }}"
+        os_type: 'ubuntu14_64Bit'
+        #password: "{{ server_pass }}"
         count: 1
         group: "{{ group }}"
         network_id: "{{ network_id }}"
