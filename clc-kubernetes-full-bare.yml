@@ -76,7 +76,7 @@
     
       
     - name: Wait for SSH to Come up on bare metal server(s)
-      wait_for: host={{ item.details.ipAddresses[0].internal }} port=22 delay=300 timeout=320 state=started
+      wait_for: host={{ item.details.ipAddresses[0].internal }} port=22 delay=600 timeout=320 state=started
       with_flattened:
         - new_inv_node.servers
         
